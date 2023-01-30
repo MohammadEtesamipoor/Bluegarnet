@@ -15,7 +15,9 @@ module.exports = {
         bgGray:'#B5B9B1',
         bgImgHero:'#292D26',
         btnGreen:'#0C574E',
-        yellowClr:'#D9B863'
+        yellowClr:'#D9B863',
+        bgWhite:"#F4F4F4",
+        bgGrayLight:"#DAD9D9",
       },
     },
     fontFamily: {

@@ -4,5 +4,9 @@
 }
 
 @mixin title-session{
-    @apply text-black border-b-2 border-b-btnGreen;
+    @apply text-black border-b-btnGreen relative z-10;
+    &:before {
+        @apply content-none absolute right-0 -bottom-2 h-1 w-1/6 border-b-4 border-btnGreen font-bold  leading-10;
+        content: "";
+      }
 }
