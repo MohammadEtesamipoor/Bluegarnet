@@ -1,0 +1,8 @@
+@mixin btnGreen{
+    @apply px-7 py-4 rounded;
+
+}
+
+@mixin title-session{
+    @apply text-black border-b-2 border-b-btnGreen;
+}

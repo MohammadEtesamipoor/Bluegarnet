@@ -6,8 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        '763': '763px',
+      },
+
       colors: {
-        bcDark:'#383D34'
+        bgDark:'#383D34',
+        bgGray:'#B5B9B1',
+        bgImgHero:'#292D26',
+        btnGreen:'#0C574E',
+        yellowClr:'#D9B863'
       },
     },
     fontFamily: {

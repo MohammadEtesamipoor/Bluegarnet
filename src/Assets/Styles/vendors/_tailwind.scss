@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .rtl {
+    direction: rtl;
+  }
+}
+
 @layer base {
   html {
     @apply font-iranianSans;
   }
   body{
+    @apply flex flex-col gap-4;
+    @apply rtl;
   }
 }

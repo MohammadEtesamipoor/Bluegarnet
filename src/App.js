@@ -1,13 +1,14 @@
-
 import 'Assets/Styles/app.scss'
+import "swiper/css/bundle";
+
 import {
   HomePage,
 } from "./Pages";
 
 function App() {
   return (
-    <div  >
-     app
+    <div className='home' >
+      <HomePage  />
     </div>
   );
 }
