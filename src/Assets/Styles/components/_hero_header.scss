@@ -12,6 +12,7 @@
     
     &__swiper{
         @apply w-2/5 h-96;
+        
         .swiper{
             @apply z-30 h-96;
         }

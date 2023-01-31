@@ -23,6 +23,7 @@ module.exports = {
     fontFamily: {
       digikala: ["Digikala"],
       iranianSans: ["IranianSans"],
+      peyda:["Peyda"]
     },
   },
   plugins: [],

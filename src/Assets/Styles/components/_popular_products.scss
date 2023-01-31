@@ -1,14 +1,16 @@
 @import "../abstracts/mixins";
 
 .popular-products {
-  @apply w-screen h-screen flex flex-col -z-20;
+  @apply w-screen h-screen flex flex-col -z-20 overflow-x-hidden;
 
-// header title
+  // header title
   &__header {
-    @apply bg-bgGray  px-32 py-24 h-4/6 flex justify-between items-start;
+    @apply bg-bgGray  px-32 py-24 h-4/6 
+    flex justify-between items-start;
 
     &--all-products {
       @apply text-btnGreen flex items-center gap-2;
+      @apply text-2xl;
     }
     &--title-session {
       @include title-session;
@@ -16,31 +18,66 @@
     }
   }
 
-//   swiper session
-  &__swiper {
-    @apply px-32 py-24 grid grid-cols-3 grid-rows-2 absolute my-20;
+  //   swiper session
+  &__box-swiper {
+    @apply px-32 py-24 w-screen  absolute;
 
-    // background color parts
-    &__parts {
-      @apply flex flex-col justify-center items-center gap-12 p-4;
+    .cursor-pointer-prevBtn,.cursor-pointer-nextBtn {
+        top: 48%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        z-index: 100;
+        cursor: pointer;
+    }
+    .cursor-pointer-nextBtn {
+      @apply bg-btnGreen left-14 text-white text-5xl rounded-sm;
+    }
+    .cursor-pointer-prevBtn{
+        @apply bg-btnGreen right-14 text-white text-5xl rounded-sm;
+    }
 
-    &:nth-child(1),&:nth-child(2){
-       @apply bg-bgWhite;
-      }
-    &:nth-child(4),&:nth-child(3){
-        @apply bg-bgGrayLight;
-      }
-      &:nth-child(5),&:nth-child(6){
-        @apply bg-bgGray;
-      }
+    .swiper {
+      @apply z-30;
+    }
+    .swiper-pagination {
+      @apply absolute z-40 text-right;
+    }
+    .swiper-pagination-bullet {
+      @apply bg-gray-600 w-3 h-3  rounded-full;
+    }
+    .swiper-pagination-bullet-active {
+      @apply bg-btnGreen w-7 rounded-xl;
+    }
 
-      // product name
-      h1 {
-        @include title-session;
-        @apply leading-10 h-20 text-xl font-black;
-      }
-      &--code-product {
-        @apply flex justify-between text-gray-600 w-full;
+    &__swiper {
+      @apply grid grid-cols-3 grid-rows-2 my-20;
+
+      // background color parts
+      &__parts {
+        @apply flex flex-col justify-center items-center gap-12 p-4;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          @apply bg-bgWhite;
+        }
+        &:nth-child(4),
+        &:nth-child(3) {
+          @apply bg-bgGrayLight;
+        }
+        &:nth-child(5),
+        &:nth-child(6) {
+          @apply bg-bgGray;
+        }
+
+        // product name
+        h1 {
+          @include title-session;
+          @apply leading-10 h-20 text-xl font-black;
+        }
+        &--code-product {
+          @apply flex justify-start gap-40 text-gray-600 w-full;
+        }
       }
     }
   }

@@ -1,5 +1,6 @@
 import heroImg from "Assets/Images/img-hero.png";
 import cubeImg from "Assets/Images/specular.png";
+import BoxSliderHero from "Components/box-slider-hero/BoxSliderHero";
 import Slider from "Components/sliders/Slider";
 function HeroHeader() {
   return (
@@ -12,7 +13,7 @@ function HeroHeader() {
 
         {/* carousel info */}
         <div className="hero-header__info__swiper">
-        <Slider /> 
+        <Slider item={BoxSliderHero} effect="flip" /> 
         </div>
 
         {/* img info Jewelry mannequin*/}
